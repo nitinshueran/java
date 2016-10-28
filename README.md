@@ -1,2 +1,4 @@
 # java
-Contains POC's related to Java
+Contains POC's related to Java.
+
+#1. Java 8 Features
