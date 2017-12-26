@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.java8.lambda.excersise1;
+package com.shu.nit.overriding.java8.lambda.e1;
 
 import java.util.Arrays;
 import java.util.List;

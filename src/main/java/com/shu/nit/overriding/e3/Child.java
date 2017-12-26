@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.example3;
+package com.shu.nit.overriding.e3;
 
 import java.util.List;
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Spliterator;
 
-import com.shu.nit.overriding.java8.lambda.excersise1.Person;
+import com.shu.nit.overriding.java8.lambda.e1.Person;
 
 public class SpliteratorDemo {
     public static void main(String[] args) {

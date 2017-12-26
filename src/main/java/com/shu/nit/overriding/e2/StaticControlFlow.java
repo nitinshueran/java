@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.example2;
+package com.shu.nit.overriding.e2;
 
 public class StaticControlFlow {
 
