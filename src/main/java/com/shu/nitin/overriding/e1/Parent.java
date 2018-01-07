@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.e1;
+package com.shu.nitin.overriding.e1;
 
 public class Parent {
 

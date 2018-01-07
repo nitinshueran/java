@@ -1,4 +1,4 @@
-package com.shu.nit.java8.defaultinterface;
+package com.shu.nitin.java8.defaultinterface;
 
 public interface BaseIntf2 {
 

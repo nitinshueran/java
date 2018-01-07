@@ -1,4 +1,4 @@
-package com.shu.nit.java8.lambda;
+package com.shu.nitin.java8.lambda;
 
 public interface NewGreeting {
 

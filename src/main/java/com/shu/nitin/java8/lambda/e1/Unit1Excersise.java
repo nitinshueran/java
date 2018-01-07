@@ -1,4 +1,4 @@
-package com.shu.nit.java8.lambda.e1;
+package com.shu.nitin.java8.lambda.e1;
 
 import java.util.Arrays;
 import java.util.List;

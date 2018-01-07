@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.e3;
+package com.shu.nitin.overriding.e3;
 
 public class Child2 extends Parent {
 

@@ -1,4 +1,4 @@
-package com.shu.nit.java8;
+package com.shu.nitin.java8;
 
 public class Test {
     public static void main(String[] args) {
