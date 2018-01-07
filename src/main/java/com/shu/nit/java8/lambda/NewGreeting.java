@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.java8.lambda;
+package com.shu.nit.java8.lambda;
 
 public interface NewGreeting {
 

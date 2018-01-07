@@ -1,4 +1,4 @@
-package com.shu.nit.overriding.java8.defaultinterface;
+package com.shu.nit.java8.defaultinterface;
 
 public class SubClass implements BaseIntf1, BaseIntf2 {
 

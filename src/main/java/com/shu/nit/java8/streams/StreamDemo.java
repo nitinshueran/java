@@ -1,10 +1,10 @@
-package com.shu.nit.overriding.java8.streams;
+package com.shu.nit.java8.streams;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.shu.nit.overriding.java8.lambda.e1.Person;
+import com.shu.nit.java8.lambda.e1.Person;
 
 public class StreamDemo {
 
