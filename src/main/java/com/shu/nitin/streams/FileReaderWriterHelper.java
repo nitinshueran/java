@@ -1,18 +1,19 @@
 package com.shu.nitin.streams;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
 
-public class ReaderDemo {
+public class FileReaderWriterHelper {
 
     public void readFileTryCatchFinally(String filePath) {
         Reader reader = null;
         try {
             reader = new FileReader(filePath);
-            readFromReader(reader);
+            printReaderContent(reader);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -28,7 +29,7 @@ public class ReaderDemo {
 
     public void readFileTryWithResources(String filePath) {
         try (Reader reader = new FileReader(filePath)) {
-            readFromReader(reader);
+            printReaderContent(reader);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -47,7 +48,15 @@ public class ReaderDemo {
         }
     }
 
-    private void readFromReader(Reader reader) throws IOException {
+    public void readFileUsingBufferedReader(String fromFileName) {
+        try (Reader reader = new BufferedReader(new FileReader(fromFileName))) {
+            printReaderContent(reader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void printReaderContent(Reader reader) throws IOException {
         char[] buffer = new char[8];
         int length;
         while ((length = reader.read(buffer)) >= 0) {
