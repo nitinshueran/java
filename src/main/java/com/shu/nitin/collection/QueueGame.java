@@ -13,65 +13,73 @@ import java.util.StringTokenizer;
 public class QueueGame {
 
 	public static void main(String[] args) throws IOException {
+		
+		//Taking input from console for no of elements and no of iterations.
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String[] input = br.readLine().split(" ");
-		int noOfElems = Integer.parseInt(input[0]);
-		int noOfIterations = Integer.parseInt(input[1]);
-		int inputElements[] = new int[noOfElems];
+		String[] elemsAndIterations = br.readLine().split(" ");
+		int noOfElems = Integer.parseInt(elemsAndIterations[0]);
+		int noOfIterations = Integer.parseInt(elemsAndIterations[1]);
+		
+		//Taking input from console for numbers to be inserted in queue
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int i = 0;
-		while(st.hasMoreTokens()){
-			inputElements[i++] = Integer.parseInt(st.nextToken());
+		
+		Queue<Element> elementQueue = new LinkedList<>();
+		int j=1;
+		while(st.hasMoreTokens() && j<=noOfElems){
+			Element elem = new Element();
+            elem.setNumber(Integer.parseInt(st.nextToken()));
+            elem.setPower(j);
+            elementQueue.offer(elem);
+            j++;
 		}
 		
-		Queue<Inner> elems = new LinkedList<>();
-		
-		for (int j = 1; j <= noOfElems; ++j) {
-            int num = inputElements[j-1];
-            Inner elem = new Inner();
-            elem.setNumber(num);
-            elem.setPower(j);
-            elems.add(elem);
-        }
-		List<Inner> fetchedElems = new ArrayList<>();
+		List<Element> poppedElementsList = new ArrayList<>();
 		for(int iterations = 0; iterations < noOfIterations; ++iterations) {
-			elems.forEach(ele -> System.out.println(ele.getNumber() +" "+ele.getPower()));
+			//printing elements of queue
+			elementQueue.forEach(System.out::print);
 			for(int itr =0; itr < noOfIterations; ++itr) {
-				fetchedElems.add(elems.remove());
+				poppedElementsList.add(elementQueue.poll());
 			}
+			
+			//finding maximum power element out of popped elements
 			int maxPower = 0;
-			for(Inner inner : fetchedElems) {
+			for(Element inner : poppedElementsList) {
 				if(inner.getPower() > maxPower) {
 					maxPower = inner.getPower();
 				}
 			}
-			Iterator<Inner> itr = fetchedElems.iterator();
+			
+			//Applying business rules to popped elements from queue present in list
+			Iterator<Element> itr = poppedElementsList.iterator();
 			while(itr.hasNext()) {
-				Inner inner = itr.next();
+				Element element = itr.next();
 				boolean elementRemoved = false;
-				if(inner.getPower() == maxPower) {
+				if(element.getPower() == maxPower) {
 					if(elementRemoved) {
-						if(inner.getPower() > 0) {
-							inner.setPower(inner.getPower()-1);
+						if(element.getPower() > 0) {
+							element.setPower(element.getPower()-1);
 						}
 					}else {
-						System.out.println(inner.getPower());
+						System.out.println();
+						System.out.println(element.getPower());
 						itr.remove();
 						elementRemoved = true;
 					}
 					
 				}
-				inner.setNumber(inner.getNumber()-1);
+				element.setNumber(element.getNumber()-1);
 			}
-			for(Inner inner: fetchedElems) {
-				elems.add(inner);
+			
+			//adding element back to queue
+			for(Element element: poppedElementsList) {
+				elementQueue.add(element);
 			}
 		}
 		
 	}
 	
 }
-class Inner{
+class Element{
 		
 		private int number;
 		private int power;
@@ -87,6 +95,10 @@ class Inner{
 		}
 		public void setPower(int power) {
 			this.power = power;
+		}
+		
+		public String toString() {
+			return Integer.toString(this.number) +"->" +Integer.toString(this.power)+"   ";
 		}
 		
 }
