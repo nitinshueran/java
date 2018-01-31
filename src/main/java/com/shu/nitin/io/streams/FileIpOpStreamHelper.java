@@ -1,4 +1,4 @@
-package com.shu.nitin.streams;
+package com.shu.nitin.io.streams;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;

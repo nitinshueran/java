@@ -1,4 +1,4 @@
-package com.shu.nitin.streams;
+package com.shu.nitin.io.streams;
 
 public class StreamDemo {
 
