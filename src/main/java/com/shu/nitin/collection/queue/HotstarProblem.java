@@ -24,6 +24,7 @@ public class HotstarProblem {
 			intervals.add(interval);
 		}
 		Collections.sort(intervals, Interval.BY_START);
+		//intervals.sort(Interval.BY_START);
 		
 		for(int i=0; i<intervals.size(); i++) {
 			for (int j = i+1; j < intervals.size(); j++) {
