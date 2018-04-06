@@ -7,7 +7,6 @@ import java.util.List;
 public class Greeter {
 
     public static void main(String[] args) throws Exception {
-        int i = 0;
         Greeting ooGreeting = new OOGreeting();
         ooGreeting.greet();
 
