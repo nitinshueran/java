@@ -1,46 +1,43 @@
 package com.shu.nitin.airtel;
 
-
-// TODO: Auto-generated Javadoc
 /**
- * The Interface ObjectPool.
+ * The Interface defines methods that will handle connection pool to any object.
  */
 public interface ObjectPool {
 
+	
 	/**
-	 * Creates the.
+	 * This method will create an instance of the type passes to it.
 	 *
-	 * @return the object
+	 * @param <T> the generic type
+	 * @param type the type
+	 * @return the t
 	 */
-	Object create();
+	<T> T create(Class<T> type);
 
 	/**
-	 * Validate.
+	 * This method will remove the object from available object list and mark it for garbage collection.
 	 *
-	 * @param o the o
-	 * @return true, if successful
-	 */
-	boolean validate(Object o);
-
-	/**
-	 * Expire.
-	 *
-	 * @param o the o
+	 * @param o
+	 *            the o
 	 */
 	void expire(Object o);
 
 	/**
-	 * Check out.
+	 * This method will fetch the Object of class type passes to it from available Object pool.
 	 *
+	 * @param <T> the generic type
+	 * @param type the type
 	 * @return the object
 	 */
-	Object checkOut();
+	<T> Object getObjectFromPool(Class<T> type);
 
+	
 	/**
-	 * Check in.
+	 * This method will add the object to connection pool
 	 *
 	 * @param o the o
 	 */
-	void checkIn( Object o );
+	void addObjectToPool(Object o);
 
 }
