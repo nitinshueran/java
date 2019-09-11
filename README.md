@@ -1,4 +1,4 @@
 # java
-Contains POC's related to Java.
+Geeks of Geeks submissions and interview problems.
 
-#1. Java 8 Features
+
