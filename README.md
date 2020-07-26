@@ -88,15 +88,14 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  ``` 
  
  ### Overview document operations - List the contents of an overview document
- 
  To get the help on list overview document command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --list --help
  ```
  ```
-  --list: This operations could be applied to an existing or new overview doucment, to print the content of the overview doument, it will be applied in 
-          combination with `--create` or `--load` overview document action. Once the overview doument is created or loaded, this it will print the content of the
-          overview document. No arguments are required for this action   
+  --list: This operations could be applied to an existing or new overview doucment, to print the content of the overview doument without key material , it will 
+          be applied in combination with `--create` or `--load` overview document action. Once the overview doument is created or loaded, this it will print the
+          content of the overview document. No arguments are required for this action   
 ```
 Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
 ``` 
@@ -109,6 +108,33 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --list
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --list
 ```
+
+ ### Overview document operations - Create key for topic
+ To get the help on create key command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --create-key --help
+ ```
+ ```
+  --create-key: Create a key for a topic with the supplied name, algorithm and expiration. The following arguments are
+            supported by the create key operation:
+           
+           1. --key-name(mandatory): The name with which key will be created.
+           2. --topic(mandatory): Topic name for which key will be added, if topic is not present in overview document, it will add the topic to the document.
+           3. --algo(mandatory): Algorithm to generate key material.
+           4. --expiration(mandatory): Date till which this key will be active.
+```
+Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+``` 
+ - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ 
+ - java -jar overview-document-cmd-{version}.jar --load --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+``` 
 
 
 
