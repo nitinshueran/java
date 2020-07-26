@@ -88,7 +88,7 @@ Samle commands, with various combinations of mandatory and optional arguments, t
  ``` 
  
  ### Overview document operations - List the contents of an overview document
- This operations could be applied to an existing or new overview doucment, to print the content of the overview doument, this action will be applied in combination with [linky](src/README.md#Load an existing overview document)
+ This operations could be applied to an existing or new overview doucment, to print the content of the overview doument, this action will be applied in combination with [link](README.md#Load an existing overview document)
  To get the help on overview document create command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --create --help
