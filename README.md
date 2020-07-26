@@ -40,18 +40,17 @@ End with an example of getting some data out of the system or using it for a lit
 The follwoing two actions could be performed to an overview document 
 
 ```
-   Create: Create and empty overview document with the given namespace.
-   Load: Load and existing overview document from a given file path and perform overview document operations.
+  Create: Create and empty overview document with the given namespace.
+  Load: Load and existing overview document from a given file path and perform overview document operations.
 ```
  
 The following operations can be executed over the new/already existing overview document:
 ```
-   List: List the content of the overview document.
-   Create Key: Create a new key associated with the given topic name.
-   Remove Key: Removes the given key name from the associate topic.
-   Renew Keys: Renew all keys which will expire before the supplied date.
-   Unmark: Unmark a topic from End to end encryption. 
- 
+  List: List the content of the overview document.
+  Create Key: Create a new key associated with the given topic name.
+  Remove Key: Removes the given key name from the associate topic.
+  Renew Keys: Renew all keys which will expire before the supplied date.
+  Unmark: Unmark a topic from End to end encryption.  
 ``` 
  
  ### Create an empty overview document
