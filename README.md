@@ -4,10 +4,10 @@ The overview document command line tool is a utility which provides functions to
 
 ```
   Create: Create and empty overview document with the given namespace.
-   Load: Load and existing overview document from a given file path and perform overview document operations.
+  Load: Load and existing overview document from a given file path and perform overview document operations.
 ```
  
-The following operations can be executed over the new/already existing overview document:
+The following operations can be executed over the new/already-existing overview document:
 ```
   List: List the content of the overview document.
   Create Key: Create a new key associated with the given topic name.
