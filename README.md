@@ -142,6 +142,34 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
 ``` 
 
+ ### Overview document operations - Remove key for topic
+ To get the help on remove key command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --remove-key --help
+ ```
+ ```
+  --remove-key: Remove a key for a topic with the supplied key and topic names. The following arguments are
+            supported by the create key operation:
+           
+           1. --key-name(mandatory): The name with which key will be removed.
+           2. --topic(mandatory): Topic name for which key will be removed.
+```
+Sample commands, with various combinations of mandatory and optional arguments, to remove key with `--create` action
+``` 
+ - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
+ ``` 
+ 
+ Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
+ ``` 
+ - java -jar overview-document-cmd-{version}.jar --load --remove-key --key-name=1 --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --remove-key --key-name=1 --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --remove-key --key-name=1 --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --remove-key --key-name=1 --topic=ABC_D_T1
+``` 
+
 
 
 
