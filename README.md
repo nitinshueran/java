@@ -174,7 +174,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
            1. --expiration(mandatory): Date till which this key will be active.
            2. --renew-expiration(mandatory): The new date till which keys will remain active.
 ```
- Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
+ Sample commands, with various combinations of mandatory and optional arguments, to renew keys with `--load` action
  ``` 
  - java -jar overview-document-cmd-{version}.jar --load --renew-keys --expiration=20200730 --renew-expiration=20200825
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --renew-keys --expiration=20200730 --renew-expiration=20200825
@@ -182,7 +182,24 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --renew-keys --expiration=20200730 --renew-expiration=20200825
 ``` 
 
-
+### Overview document operations - unmark topic from E2E encryption
+ To get the help on unmark topic from E2E encryption command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --unmark --help
+ ```
+ ```
+  --unmark: Unmarks a topic from E2E encryption, which means setting the active key name to '0'. The following arguments are supported by the unmark operation:
+           
+           1. --topic(mandatory): Topic which needs to be unmarked from End to end encryption.
+          
+```
+ Sample commands, with various combinations of mandatory and optional arguments, to unmark topic with `--load` action
+ ``` 
+ - java -jar overview-document-cmd-{version}.jar --load --unmark --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --unmark --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --unmark --topic=ABC_D_T1
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --unmark --topic=ABC_D_T1
+``` 
 
 
 
