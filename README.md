@@ -47,7 +47,10 @@ java -jar overview-document-cmd-{version}.jar --help
 
  
  ### Create an empty overview document
- 
+ To get the help on overview document create command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --create --help
+ ```
  ```
   --create: Create an empty overview document, this option is required when you don't want to load an existing overview document. The following arguments are
            supported by the create action:
@@ -55,18 +58,15 @@ java -jar overview-document-cmd-{version}.jar --help
            1. --name(optional): The overview document name, if not provided, the utility will create overview document with defalt name.
            2. --path(optional): The directory to store the created overview document, if not provided, the utility will create the document in default directory. 
            3. --namespace(mandatory): Namespace for which the empty overview document will be created, this parameter is mandatory. 
- 
-Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
- 
+```
+commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+``` 
  Command1: java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D
  Command2: java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D
  Command3: java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D
  Command4: java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D
- 
- To get the help on overview document create command, please execute the following command:
- Command: java -jar overview-document-cmd-{version}.jar --create --help
+``` 
 
-```
 
  ### Load an existing overview document
  
