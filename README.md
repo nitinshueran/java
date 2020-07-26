@@ -53,13 +53,13 @@ java -jar overview-document-cmd-{version}.jar --help
  ```
  ```
   --create: Create an empty overview document, this option is required when you don't want to load an existing overview document. The following arguments are
-           supported by the create action:
+            supported by the create action:
            
            1. --name(optional): The overview document name, if not provided, the utility will create overview document with defalt name.
            2. --path(optional): The directory to store the created overview document, if not provided, the utility will create the document in default directory. 
            3. --namespace(mandatory): Namespace for which the empty overview document will be created, this parameter is mandatory. 
 ```
-Samle commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
 ``` 
  - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D
  - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D
@@ -88,26 +88,29 @@ Samle commands, with various combinations of mandatory and optional arguments, t
  ``` 
  
  ### Overview document operations - List the contents of an overview document
- This operations could be applied to an existing or new overview doucment, to print the content of the overview doument, this action will be applied in combination with [link](#Load an existing overview document)
- To get the help on overview document create command, please execute the following command:
+ 
+ To get the help on list overview document command, please execute the following command:
  ```
- Command: java -jar overview-document-cmd-{version}.jar --create --help
+ Command: java -jar overview-document-cmd-{version}.jar --list --help
  ```
  ```
-  --create: Create an empty overview document, this option is required when you don't want to load an existing overview document. The following arguments are
-           supported by the create action:
-           
-           1. --name(optional): The overview document name, if not provided, the utility will create overview document with defalt name.
-           2. --path(optional): The directory to store the created overview document, if not provided, the utility will create the document in default directory. 
-           3. --namespace(mandatory): Namespace for which the empty overview document will be created, this parameter is mandatory. 
+  --list: This operations could be applied to an existing or new overview doucment, to print the content of the overview doument, it will be applied in 
+          combination with `--create` or `--load` overview document action. Once the overview doument is created or loaded, this it will print the content of the
+          overview document. No arguments are required for this action   
 ```
-Samle commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
 ``` 
- - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D
- - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D
+ - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --load --list
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --list
+ - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --list
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --list
 ```
+
+
 
 
 
