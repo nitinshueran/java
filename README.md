@@ -149,25 +149,37 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  ```
  ```
   --remove-key: Remove a key for a topic with the supplied key and topic names. The following arguments are
-            supported by the create key operation:
+            supported by the remove key operation:
            
            1. --key-name(mandatory): The name with which key will be removed.
            2. --topic(mandatory): Topic name for which key will be removed.
 ```
-Sample commands, with various combinations of mandatory and optional arguments, to remove key with `--create` action
-``` 
- - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
- - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --remove-key --key-name=1 --topic=ABC_D_T1
- ``` 
- 
  Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
  ``` 
  - java -jar overview-document-cmd-{version}.jar --load --remove-key --key-name=1 --topic=ABC_D_T1
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --remove-key --key-name=1 --topic=ABC_D_T1
  - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --remove-key --key-name=1 --topic=ABC_D_T1
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --remove-key --key-name=1 --topic=ABC_D_T1
+``` 
+
+### Overview document operations - Renew keys for topic/topics
+ To get the help on renew keys command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --renew-keys --help
+ ```
+ ```
+  --renew-keys: Filters the active keys based on the expiration date supplied, generates new keys, with new expiration and marks old keys inactive. The following
+               arguments are supported by the renew key operation:
+           
+           1. --expiration(mandatory): Date till which this key will be active.
+           2. --renew-expiration(mandatory): The new date till which keys will remain active.
+```
+ Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
+ ``` 
+ - java -jar overview-document-cmd-{version}.jar --load --renew-keys --expiration=20200730 --renew-expiration=20200825
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --renew-keys --expiration=20200730 --renew-expiration=20200825
+ - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --renew-keys --expiration=20200730 --renew-expiration=20200825
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --renew-keys --expiration=20200730 --renew-expiration=20200825
 ``` 
 
 
