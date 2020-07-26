@@ -97,12 +97,15 @@ Sample commands, with various combinations of mandatory and optional arguments, 
           be applied in combination with `--create` or `--load` overview document action. Once the overview doument is created or loaded, this it will print the
           content of the overview document. No arguments are required for this action   
 ```
-Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+Sample commands, with various combinations of mandatory and optional arguments, to list overview document with `--create` action
 ``` 
  - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --list
  - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --list
  - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --list
  - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --list
+``` 
+Sample commands, with various combinations of mandatory and optional arguments, to list overview document with `--load` action
+``` 
  - java -jar overview-document-cmd-{version}.jar --load --list
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --list
  - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --list
@@ -123,13 +126,16 @@ Sample commands, with various combinations of mandatory and optional arguments, 
            3. --algo(mandatory): Algorithm to generate key material.
            4. --expiration(mandatory): Date till which this key will be active.
 ```
-Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+Sample commands, with various combinations of mandatory and optional arguments, to create key with `--create` action
 ``` 
  - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
  - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
  - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
  - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
+ ``` 
  
+ Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
+ ``` 
  - java -jar overview-document-cmd-{version}.jar --load --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
  - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
