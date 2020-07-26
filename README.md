@@ -1,6 +1,6 @@
 # Overview document command line tool
 
-The overview document command line tool is a utility to which provides functions to alter the state of an existing or new overview document. The follwoing two actions could be performed to an overview document 
+The overview document command line tool is a utility which provides functions to alter the state of an existing or new overview document. The follwoing two actions could be performed to an overview document 
 
 ```
   Create: Create and empty overview document with the given namespace.
