@@ -3,8 +3,8 @@
 The overview document command line tool is a utility which provides functions to alter the state of an existing or new overview document. The follwoing two actions could be performed to an overview document 
 
 ```
-  Create: Create and empty overview document with the given namespace.
-  Load: Load and existing overview document from a given file path and perform overview document operations.
+  Create: Create an empty overview document with the given namespace.
+  Load: Load an existing overview document from a given file path and perform overview document operations.
 ```
  
 The following operations can be executed over the new/already-existing overview document:
