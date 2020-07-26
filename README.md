@@ -1,14 +1,19 @@
 # Overview document command line tool
 
-The overview document command line tool is a utility to perform the following actions to the overview document:
+The overview document command line tool is a utility to which provides functions to alter the state of an existing or new overview document. The follwoing two actions could be performed to an overview document 
+
 ```
-1. Create an empty overview document with the given namespace.
-2. Load an existing overview document on the supplied path.
-3. List the content of overview document.
-4. Create a new key to an existing or new topic in the overview document with the given key-name, algorithm and expiration.
-5. Unmark a topic from end to end encryption.
-6. Remove the keyname from the given topic
-7. Renew existing keys which are expiring before the supplied date
+  Create: Create and empty overview document with the given namespace.
+   Load: Load and existing overview document from a given file path and perform overview document operations.
+```
+ 
+The following operations can be executed over the new/already existing overview document:
+```
+  List: List the content of the overview document.
+  Create Key: Create a new key associated with the given topic name.
+  Remove Key: Removes the given key name from the associate topic.
+  Renew Keys: Renew all keys which will expire before the supplied date.
+  Unmark: Unmark a topic from End to end encryption.  
 ```
 ## Getting Started
 
@@ -35,21 +40,11 @@ A step by step guide that tell you how to get a development env running
 
 ## Command line tool --help menu
 
-The follwoing two actions could be performed to an overview document 
+The command line tool help menu will display all actions and their arguments that needs to be supplied, please use the following command to display help page for the tool
+```
+java -jar overview-document-cmd-{version}.jar --help
+```
 
-```
-  Create: Create and empty overview document with the given namespace.
-  Load: Load and existing overview document from a given file path and perform overview document operations.
-```
- 
-The following operations can be executed over the new/already existing overview document:
-```
-  List: List the content of the overview document.
-  Create Key: Create a new key associated with the given topic name.
-  Remove Key: Removes the given key name from the associate topic.
-  Renew Keys: Renew all keys which will expire before the supplied date.
-  Unmark: Unmark a topic from End to end encryption.  
-``` 
  
  ### Create an empty overview document
  
