@@ -33,8 +33,6 @@ A step by step guide that tell you how to get a development env running
  5. You can now run the above mentioned actions using the help page guidelines.
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Command line tool --help menu
 
 The follwoing two actions could be performed to an overview document 
