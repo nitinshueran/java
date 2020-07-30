@@ -1,19 +1,30 @@
 # Overview document command line tool
 
-The overview document command line tool is a utility which provides functions to alter the state of an existing or new overview document. The follwoing two actions could be performed to an overview document 
+The overview document command line tool is a utility which provides functions to alter the state of an existing or new overview document. The follwoing actions could be performed to an overview document:
 
+ 1. Initialize overview document.
+ 2. Intermediate overview document operations.
+ 3. Terminal Operataions.
+
+### Initialize overview document: 
+The following two operations could be performed to initalize a new or an existing overview document:
 ```
   Create: Create an empty overview document with the given namespace.
   Load: Load an existing overview document from a given file path and perform overview document operations.
 ```
- 
-The following operations can be executed over the new/already-existing overview document:
+### Intermediate overview document operations:
+The following, intermediate, operations can be executed over the new/already-existing overview document:
 ```
-  List: List the content of the overview document.
   Create Key: Create a new key associated with the given topic name.
   Remove Key: Removes the given key name from the associate topic.
   Renew Keys: Renew all keys which will expire before the supplied date.
   Unmark: Unmark a topic from End to end encryption.  
+```
+### Terminal operations:
+The following two operaitions could be performed to either list or save the contents of overview document:
+```
+  List: List the content of the overview document.
+  Save: Will save the overview document to a directory with the given/default file name.   
 ```
 ## Getting Started
 
