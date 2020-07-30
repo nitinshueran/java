@@ -16,7 +16,7 @@ The following two operations could be performed to initalize a new or an existin
 The following, intermediate, operations can be executed over the new/already-existing overview document:
 ```
   Create Key: Create a new key associated with the given topic name.
-  Remove Key: Removes the given key name from the associate topic.
+  Remove Key: Removes the given key name from the associated topic.
   Renew Keys: Renew all keys which will expire before the supplied date.
   Unmark: Unmark a topic from End to end encryption.  
 ```
@@ -63,17 +63,14 @@ java -jar overview-document-cmd-{version}.jar --help
  Command: java -jar overview-document-cmd-{version}.jar --create --help
  ```
  ```
-  --create: Create an empty overview document, this option is required when you don't want to load an existing overview document. The following arguments are
+  --create: Creates an empty overview document, this option is required when you don't want to load an existing overview document. The following arguments are
             supported by the create action:
-          1. --namespace(mandatory): Namespace for which the empty overview document will be created, this parameter is mandatory. 
+          1. --namespace(mandatory): Namespace for which the empty overview document will be created.
 ```
 Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
 ``` 
  - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D
- - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D
-``` 
+```
 
  ### Init operation - Load an existing overview document
  To get the help on overview document load command, please execute the following command:
@@ -133,7 +130,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
   --remove-key: Remove a key for a topic with the supplied key and topic names. The following arguments are
             supported by the remove key operation:
            
-           1. --key-name(mandatory): The name with which key will be removed.
+           1. --key-name(mandatory): Key name to be removed, this will throw error if you try to remove an active key.
            2. --topic(mandatory): Topic name for which key will be removed.
 ```
  Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
