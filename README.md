@@ -108,9 +108,6 @@ Sample commands, with various combinations of mandatory and optional arguments, 
 Sample commands, with various combinations of mandatory and optional arguments, to create key with `--create` action
 ``` 
  - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
- - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
  ``` 
  
  Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
@@ -133,7 +130,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
            1. --key-name(mandatory): Key name to be removed, this will throw error if you try to remove an active key.
            2. --topic(mandatory): Topic name for which key will be removed.
 ```
- Sample commands, with various combinations of mandatory and optional arguments, to create key with `--load` action
+ Sample commands, with various combinations of mandatory and optional arguments, to remove key with `--load` action
  ``` 
  - java -jar overview-document-cmd-{version}.jar --load --remove-key --key-name=1 --topic=ABC_D_T1
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --remove-key --key-name=1 --topic=ABC_D_T1
@@ -210,7 +207,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  Command: java -jar overview-document-cmd-{version}.jar --save --help
  ```
  ```
-  --save: Save the updated/new overview document to the provided/defaule file path with the provided/default file name. The following arguments are
+  --save: Save the updated/new overview document to the provided/default file path with the provided/default file name. The following arguments are
             supported by the save action:
            
            1. --name(optional): The overview document name, if not provided, the utility will save overview document with defalt name.
