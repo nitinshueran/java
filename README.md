@@ -57,7 +57,7 @@ java -jar overview-document-cmd-{version}.jar --help
 ```
 
  
- ### Create an empty overview document
+ ### Init operation - Create an empty overview document
  To get the help on overview document create command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --create --help
@@ -65,10 +65,7 @@ java -jar overview-document-cmd-{version}.jar --help
  ```
   --create: Create an empty overview document, this option is required when you don't want to load an existing overview document. The following arguments are
             supported by the create action:
-           
-           1. --name(optional): The overview document name, if not provided, the utility will create overview document with defalt name.
-           2. --path(optional): The directory to store the created overview document, if not provided, the utility will create the document in default directory. 
-           3. --namespace(mandatory): Namespace for which the empty overview document will be created, this parameter is mandatory. 
+          1. --namespace(mandatory): Namespace for which the empty overview document will be created, this parameter is mandatory. 
 ```
 Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
 ``` 
@@ -78,8 +75,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D
 ``` 
 
-
- ### Load an existing overview document
+ ### Init operation - Load an existing overview document
  To get the help on overview document load command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --load --help
@@ -97,33 +93,8 @@ Sample commands, with various combinations of mandatory and optional arguments, 
   - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/
   - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/
  ``` 
- 
- ### Overview document operations - List the contents of an overview document
- To get the help on list overview document command, please execute the following command:
- ```
- Command: java -jar overview-document-cmd-{version}.jar --list --help
- ```
- ```
-  --list: This operations could be applied to an existing or new overview doucment, to print the content of the overview doument without key material , it will 
-          be applied in combination with `--create` or `--load` overview document action. Once the overview doument is created or loaded, this it will print the
-          content of the overview document. No arguments are required for this action   
-```
-Sample commands, with various combinations of mandatory and optional arguments, to list overview document with `--create` action
-``` 
- - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --list
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --list
- - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --list
- - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --list
-``` 
-Sample commands, with various combinations of mandatory and optional arguments, to list overview document with `--load` action
-``` 
- - java -jar overview-document-cmd-{version}.jar --load --list
- - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --list
- - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --list
- - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --list
-```
 
- ### Overview document operations - Create key for topic
+ ### Intermediate operation - Create key for topic
  To get the help on create key command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --create-key --help
@@ -153,7 +124,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --create-key --key-name=1 --topic=ABC_D_T1 --algo=1 --expiration=20200901
 ``` 
 
- ### Overview document operations - Remove key for topic
+ ### Intermediate operation - Remove key for topic
  To get the help on remove key command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --remove-key --help
@@ -173,7 +144,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --remove-key --key-name=1 --topic=ABC_D_T1
 ``` 
 
-### Overview document operations - Renew keys for topic/topics
+### Intermediate operation - Renew keys for topic/topics
  To get the help on renew keys command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --renew-keys --help
@@ -193,7 +164,7 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --renew-keys --expiration=20200730 --renew-expiration=20200825
 ``` 
 
-### Overview document operations - unmark topic from E2E encryption
+### Intermediate operation - unmark topic from E2E encryption
  To get the help on unmark topic from E2E encryption command, please execute the following command:
  ```
  Command: java -jar overview-document-cmd-{version}.jar --unmark --help
@@ -211,7 +182,49 @@ Sample commands, with various combinations of mandatory and optional arguments, 
  - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --unmark --topic=ABC_D_T1
  - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --unmark --topic=ABC_D_T1
 ``` 
+ ### Terminal operation - List the contents of an overview document
+ To get the help on list overview document command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --list --help
+ ```
+ ```
+  --list: This operations could be applied to an existing or new overview doucment, to print the content of the overview doument without key material , it will 
+          be applied in combination with `--create` or `--load` overview document action. Once the overview doument is created or loaded, this it will print the
+          content of the overview document. No arguments are required for this action   
+```
+Sample commands, with various combinations of mandatory and optional arguments, to list overview document with `--create` action
+``` 
+ - java -jar overview-document-cmd-{version}.jar --create --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --create --path=../overview-documents/ --namespace=ABC_D --list
+ - java -jar overview-document-cmd-{version}.jar --create --name=overview-document-sample-name --path=../overview-documents/ --namespace=ABC_D --list
+``` 
+Sample commands, with various combinations of mandatory and optional arguments, to list overview document with `--load` action
+``` 
+ - java -jar overview-document-cmd-{version}.jar --load --list
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --list
+ - java -jar overview-document-cmd-{version}.jar --load --path=../overview-documents/ --list
+ - java -jar overview-document-cmd-{version}.jar --load --name=overview-document-sample-name --path=../overview-documents/ --list
+```
 
-
+### Terminal operation: Save overview document
+ To get the help on overview document save command, please execute the following command:
+ ```
+ Command: java -jar overview-document-cmd-{version}.jar --save --help
+ ```
+ ```
+  --save: Save the updated/new overview document to the provided/defaule file path with the provided/default file name. The following arguments are
+            supported by the save action:
+           
+           1. --name(optional): The overview document name, if not provided, the utility will save overview document with defalt name.
+           2. --path(optional): The directory to store the created overview document, if not provided, the utility will save the document in default directory. 
+```
+Sample commands, with various combinations of mandatory and optional arguments, to create an empty overview document:
+``` 
+ - java -jar overview-document-cmd-{version}.jar --save
+ - java -jar overview-document-cmd-{version}.jar --save --name=overview-document-sample-name
+ - java -jar overview-document-cmd-{version}.jar --save --path=../overview-documents/
+ - java -jar overview-document-cmd-{version}.jar --save --name=overview-document-sample-name --path=../overview-documents/
+``` 
 
 
