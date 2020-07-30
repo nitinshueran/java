@@ -1,11 +1,11 @@
 # Overview document command line tool
 
 The overview document command line tool is a utility which provides functions to alter the state of an existing or new overview document. The follwoing actions could be performed to an overview document:
-
+```
  1. Initialize overview document.
  2. Intermediate overview document operations.
  3. Terminal Operataions.
-
+```
 ### Initialize overview document: 
 The following two operations could be performed to initalize a new or an existing overview document:
 ```
