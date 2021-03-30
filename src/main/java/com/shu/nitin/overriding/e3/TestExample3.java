@@ -6,7 +6,7 @@ import java.util.List;
 public class TestExample3 {
     public static void main(String[] args) {
 
-        List<String> names = new ArrayList<String>();
+        List<String> names = new ArrayList<>();
         names.add("Nitin");
         names.add("Ritu");
         Parent p = new Child(names);

@@ -7,7 +7,7 @@ public class Child extends Parent {
     private List<String> names;
 
     public Child() {
-        // TODO Auto-generated constructor stub
+        
     }
 
     public Child(List<String> names) {
