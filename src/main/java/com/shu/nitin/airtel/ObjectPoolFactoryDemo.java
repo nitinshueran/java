@@ -14,9 +14,6 @@ public class ObjectPoolFactoryDemo {
 		
 		LOGGER.info("Creating connection pool of FileParserObject");
 		ObjectPoolFactory factory = ObjectPoolFactory.getObjectPoolFactory();
-		for(int i=0; i<100; i++) {
-			
-		}
 		ObjectPoolFactoryDemo demo = (ObjectPoolFactoryDemo) factory.getObjectFromPool(ObjectPoolFactoryDemo.class);
 		demo.count++;
 		demo.success();
