@@ -1,7 +1,5 @@
 package com.shu.nitin.leetcode;
 
-import java.util.List;
-
 public class PallindromeLinkedList {
 
     public static void main(String[] args) {
@@ -28,11 +26,8 @@ public class PallindromeLinkedList {
             reverse = reverse * 10 + tmp % 10;
             tmp = tmp / 10;
         }
-        List<Integer> test =  Arrays.asList(1,1,1).sort((x,y) -> x.compareTo(y));
-        Map<Integer, Integer> test = new HashMap<>();
-        test.containsKey(key)
-        if (number == reverse)
-            return true;
+        
+       
 
         return false;
     }
